@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+ <settings>
+  <setting name="useGeneratedKeys" value="true"/>
+  <setting name="mapUnderscoreToCamelCase" value="true"/>
+  
+ </settings>
+  
+  
+  <environments default="master">
+    <environment id="master">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://172.17.18.3/db01"/>
+        <property name="username" value="dbu01"/>
+        <property name="password" value="password"/>
+      </dataSource>
+    </environment>
+    
+   <environment id="slave01">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://172.17.18.3/db01"/>
+        <property name="username" value="dbu01"/>
+        <property name="password" value="password"/>
+      </dataSource>
+    </environment>    
+  </environments>
+   
+  
+  <mappers>
+    
+  </mappers>
+  
+  
+
+</configuration>

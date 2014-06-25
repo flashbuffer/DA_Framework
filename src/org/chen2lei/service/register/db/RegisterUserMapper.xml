@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="db.RegisterUserMapper">
+  <cache flushInterval="30000" size="512" readOnly="true"/>
+	
+	
+  <select id="selectUserByTelNumber" resultType="org.chen2lei.service.register.db.RegisterUser">
+    select id, name, tel_number from user where tel_number = #{tel_number}
+  </select>
+  
+  <insert id="addUser" parameterType="org.chen2lei.service.register.db.RegisterUser" 
+  	useGeneratedKeys="true" keyProperty="id">   
+    insert into user (name,tel_number,password,email)   
+    values (#{name},#{telNumber},#{password},#{email}) 
+  </insert>
+  
+</mapper>
