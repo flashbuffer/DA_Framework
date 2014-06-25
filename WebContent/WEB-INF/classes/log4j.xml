@@ -18,7 +18,7 @@
          <level value="INFO" />
     </logger>
     
-    <logger name="com.zarsion">
+    <logger name="org.chen2lei">
          <level value="DEBUG" />
     </logger>
    
